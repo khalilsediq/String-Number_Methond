@@ -85,20 +85,32 @@ let newVar = myVar.split(",");
 // 1. Lowercase Name Write a function that takes a name as input and returns it all in lowercase.
 const userIn = document.querySelector("#userInput");
 const btn = document.querySelector("#userName");
-const ul  = document.querySelector("#ul")
-
+const ul = document.querySelector("#ul");
+const upperCase = document.querySelector("#upperCase");
 btn.addEventListener("click", function () {
   let userN = userIn.value;
-  if (userN.trim() === "" ) {
-    alert("Please Type Something in the Input Field")  
-  } 
-  ul.innerHTML = `<li>${userN.toLowerCase()}</li>`
-
-  userIn.value = ""
+  if (userN.trim() === "") {
+    alert("Please Type Something in the Input Field");
+  } else {
+    ul.innerHTML += `<li>${userN.toLowerCase()}</li>`;
+    userIn.value = "";
+  }
   // return userN.toLowerCase();
 });
 // console.log(userName(prompt("Enter Your Name")));
 
-
-
 // 2. Uppercase Shouting Convert a given string into uppercase to simulate shouting. Example: "hello" →"HELLO".
+
+upperCase.addEventListener("click", () => {
+  let upCase = userIn.value;
+  if (upCase.trim() === "") {
+    alert("Please Type Something in the Input Field");
+  } else {
+    ul.innerHTML += `
+  <li>
+    ${upCase.toUpperCase()}
+  </li>
+  `;
+    userIn.value = "";
+  }
+});
