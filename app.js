@@ -120,7 +120,7 @@ upperCase.addEventListener("click", () => {
 
 
 // 3. Count Characters Given a string, return the number of characters in it.
-
 let str = prompt("Enter Any thing")
 
 
+  console.log(str.trim().length);
