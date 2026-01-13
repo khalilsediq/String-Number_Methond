@@ -100,7 +100,6 @@ btn.addEventListener("click", function () {
 // console.log(userName(prompt("Enter Your Name")));
 
 // 2. Uppercase Shouting Convert a given string into uppercase to simulate shouting. Example: "hello" →"HELLO".
-
 upperCase.addEventListener("click", () => {
   let upCase = userIn.value;
   if (upCase.trim() === "") {
@@ -114,3 +113,14 @@ upperCase.addEventListener("click", () => {
     userIn.value = "";
   }
 });
+////////////////////////////////////////////////////////////
+
+
+
+
+
+// 3. Count Characters Given a string, return the number of characters in it.
+
+let str = prompt("Enter Any thing")
+
+
