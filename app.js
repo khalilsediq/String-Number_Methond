@@ -136,3 +136,29 @@ countRestul.addEventListener('click', ()=> {
 }
 userIn.value = "";
 });
+///////////////////Completed.
+
+
+// 4. First Character: Write a function that returns the first character of a string using charAt().
+// const inputChar = document.querySelector("#inputChar")
+
+// inputChar.addEventListener("change", ()=>{
+//   let char = inputChar.value;
+ 
+//   console.log(char.trim());
+  
+// })
+const inpuChar = document.querySelector("#inputChar")
+const body = document.querySelector("body")
+// let st = prompt("enter Character:").trim()
+let newCh;
+// console.log(st.charAt(0));
+inpuChar.addEventListener("change", ()=>{
+  let ch = inpuChar.value;
+  newCh =  ch.trim().charAt(0)
+  body.innerHTML = `<h3> 
+  first Character of the input is => ${newCh}
+  </h3>`
+  console.log(newCh);
+})
+
