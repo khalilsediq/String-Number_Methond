@@ -116,10 +116,15 @@ upperCase.addEventListener("click", () => {
 ////////////////////////////////////////////////////////////
 
 // 3. Count Characters Given a string, return the number of characters in it.
-let str = prompt("Enter Any thing");
 
-if (str.trim() === "") {
-  alert("Please Input Anything");
+const countRestul = document.querySelector("#countResult")
+
+countRestul.addEventListener('click', ()=> {
+  let str = userIn.value;
+  if (str.trim() === "") {
+  alert("Please Input any word");
 } else {
   console.log(str.trim().length);
 }
+userIn.value = "";
+});
