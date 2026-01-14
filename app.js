@@ -117,6 +117,7 @@ upperCase.addEventListener("click", () => {
 
 // 3. Count Characters Given a string, return the number of characters in it.
 
+const childul = document.querySelector("#child-ul")
 const countRestul = document.querySelector("#countResult")
 
 countRestul.addEventListener('click', ()=> {
@@ -125,7 +126,13 @@ countRestul.addEventListener('click', ()=> {
   alert("Please Input any word");
 } else {
   console.log(str.trim().length);
-  
+  childul.innerHTML = `
+    <ul> 
+  <li>
+  The Character of this string is => ${str.trim().length}
+  </li>
+    </ul>
+  `
 }
 userIn.value = "";
 });
