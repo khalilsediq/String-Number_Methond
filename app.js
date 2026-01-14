@@ -125,6 +125,7 @@ countRestul.addEventListener('click', ()=> {
   alert("Please Input any word");
 } else {
   console.log(str.trim().length);
+  
 }
 userIn.value = "";
 });
