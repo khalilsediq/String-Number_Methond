@@ -156,7 +156,7 @@ let newCh;
 inpuChar.addEventListener("change", ()=>{
   let ch = inpuChar.value;
   newCh =  ch.trim().charAt(0)
-  body.innerHTML = `<h3> 
+  body.innerHTML += `<h3> 
   first Character of the input is => ${newCh}
   </h3>`
   console.log(newCh);
