@@ -120,21 +120,21 @@ upperCase.addEventListener("click", () => {
 const childul = document.querySelector("#child-ul")
 const countRestul = document.querySelector("#countResult")
 
-countRestul.addEventListener('click', ()=> {
+countRestul.addEventListener('click', () => {
   let str = userIn.value;
   if (str.trim() === "") {
-  alert("Please Input any word");
-} else {
-  console.log(str.trim().length);
-  childul.innerHTML = `
+    alert("Please Input any word");
+  } else {
+    console.log(str.trim().length);
+    childul.innerHTML = `
     <ul> 
   <li>
   The Character of this string is => ${str.trim().length}
   </li>
     </ul>
   `
-}
-userIn.value = "";
+  }
+  userIn.value = "";
 });
 ///////////////////Completed.
 
@@ -144,21 +144,37 @@ userIn.value = "";
 
 // inputChar.addEventListener("change", ()=>{
 //   let char = inputChar.value;
- 
+
 //   console.log(char.trim());
-  
+
 // })
 const inpuChar = document.querySelector("#inputChar")
 const body = document.querySelector("body")
 // let st = prompt("enter Character:").trim()
 let newCh;
 // console.log(st.charAt(0));
-inpuChar.addEventListener("change", ()=>{
+inpuChar.addEventListener("change", () => {
   let ch = inpuChar.value;
-  newCh =  ch.trim().charAt(0)
+  newCh = ch.trim().charAt(0)
   body.innerHTML += `<h3> 
   first Character of the input is => ${newCh}
   </h3>`
   console.log(newCh);
 })
 
+
+//////////////////////Done:
+
+
+
+
+// find Second word:  write a funciton to find a second word in a sentence using split()
+function CallToSplit() {
+  let sentence = prompt("Enter Your Sentence")
+  let sentenceSp = sentence.trim()
+  let newSentence = sentenceSp.split(" ")
+  if(newSentence[1] === undefined) return "Sorry We could Not Find Your Second Word."
+  return `your second word is ${newSentence[1]} ` 
+  // console.log(sentenceSp[1]);
+}
+console.log(CallToSplit());
