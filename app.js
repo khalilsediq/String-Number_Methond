@@ -187,9 +187,20 @@ bt12.addEventListener("click", () => {
 //13: censor a word: Replace ALl instances of a bad word like "dumb" in a string with "******"
 
 let censorSenctence = "hello your are dumb as fuck"
-let multipleSencors = censorSenctence.replace("dumb", "*****" )
+let multipleSencors = censorSenctence.replace("dumb", "*****")
 
 console.log(multipleSencors);
+///////////////////Done
 
+//14: count word in sentence: use .split() and .length to count how many words are in a sentence.
 
+let words = prompt("Enter your senctence to count how many words are their in your sentence ").trim()
+let wordCount = words.split(" ")
+
+if (wordCount.length > 1) {
+  console.log(`You have ${wordCount.length} words in your sentences`)
+} else {
+  console.log(`You have ${wordCount.length} word in your sentences`)
+}
+///////////////////Done
 
