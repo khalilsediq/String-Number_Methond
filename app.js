@@ -117,10 +117,10 @@ upperCase.addEventListener("click", () => {
 
 // 3. Count Characters Given a string, return the number of characters in it.
 
-const childul = document.querySelector("#child-ul")
-const countRestul = document.querySelector("#countResult")
+const childul = document.querySelector("#child-ul");
+const countRestul = document.querySelector("#countResult");
 
-countRestul.addEventListener('click', () => {
+countRestul.addEventListener("click", () => {
   let str = userIn.value;
   if (str.trim() === "") {
     alert("Please Input any word");
@@ -132,12 +132,11 @@ countRestul.addEventListener('click', () => {
   The Character of this string is => ${str.trim().length}
   </li>
     </ul>
-  `
+  `;
   }
   userIn.value = "";
 });
 ///////////////////Completed.
-
 
 // 4. First Character: Write a function that returns the first character of a string using charAt().
 // const inputChar = document.querySelector("#inputChar")
@@ -148,59 +147,68 @@ countRestul.addEventListener('click', () => {
 //   console.log(char.trim());
 
 // })
-const inpuChar = document.querySelector("#inputChar")
-const body = document.querySelector("body")
+const inpuChar = document.querySelector("#inputChar");
+const body = document.querySelector("body");
 // let st = prompt("enter Character:").trim()
 let newCh;
 // console.log(st.charAt(0));
 inpuChar.addEventListener("change", () => {
   let ch = inpuChar.value;
-  newCh = ch.trim().charAt(0)
+  newCh = ch.trim().charAt(0);
   body.innerHTML += `<h3> 
   first Character of the input is => ${newCh}
-  </h3>`
+  </h3>`;
   console.log(newCh);
-})
-
+});
 
 //////////////////////Done:
 
-
-
-
 // find Second word:  write a funciton to find a second word in a sentence using split()
-const bt12 = document.querySelector("#bt12")
+const bt12 = document.querySelector("#bt12");
 bt12.addEventListener("click", () => {
-
   function CallToSplit() {
-    let sentence = prompt("Enter Your Sentence")
-    let sentenceSp = sentence.trim()
-    let newSentence = sentenceSp.split(" ")
-    if (newSentence[1] === undefined) return "Sorry We could Not Find Your Second Word."
-    return `your second word is ${newSentence[1]} `
+    let sentence = prompt("Enter Your Sentence");
+    let sentenceSp = sentence.trim();
+    let newSentence = sentenceSp.split(" ");
+    if (newSentence[1] === undefined)
+      return "Sorry We could Not Find Your Second Word.";
+    return `your second word is ${newSentence[1]} `;
     // console.log(sentenceSp[1]);
   }
   console.log(CallToSplit());
-})
-
+});
 
 //13: censor a word: Replace ALl instances of a bad word like "dumb" in a string with "******"
-
-let censorSenctence = "hello your are dumb as fuck"
-let multipleSencors = censorSenctence.replace("dumb", "*****")
+let censorSenctence = "hello your are dumb as fuck";
+let multipleSencors = censorSenctence.replace("dumb", "*****");
 
 console.log(multipleSencors);
 ///////////////////Done
 
 //14: count word in sentence: use .split() and .length to count how many words are in a sentence.
+const bt14 = document.querySelector("#bt14");
+bt14.addEventListener("click", () => {
+  let words = prompt(
+    "Enter your senctence to count how many words are their in your sentence "
+  ).trim();
+  let wordCount = words.split(" ");
 
-let words = prompt("Enter your senctence to count how many words are their in your sentence ").trim()
-let wordCount = words.split(" ")
-
-if (wordCount.length > 1) {
-  console.log(`You have ${wordCount.length} words in your sentences`)
-} else {
-  console.log(`You have ${wordCount.length} word in your sentences`)
-}
+  if (wordCount.length > 1) {
+    console.log(`You have ${wordCount.length} words in your sentences`);
+  } else {
+    console.log(`You have ${wordCount.length} word in your sentences`);
+  }
+});
 ///////////////////Done
 
+//15: return true if Word exist: return true if a specific word (e.g., "cat") exists in a string using indexof.
+
+let reWrd = "hi this is car";
+// let checkWrd = true;
+if (reWrd.indexOf("cat")) {
+  checkWrd = true;
+  console.log(checkWrd);
+} else {
+  checkWrd = false;
+  console.log(checkWrd);
+}
