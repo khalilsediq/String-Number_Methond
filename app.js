@@ -187,8 +187,9 @@ bt12.addEventListener("click", () => {
 //13: censor a word: Replace ALl instances of a bad word like "dumb" in a string with "******"
 
 let censorSenctence = "hello your are dumb"
+console.log(censorSenctence.replace("dumb", "******"))
 if (censorSenctence.toLowerCase() === "dumb" || censorSenctence.toLowerCase() === "shit" || censorSenctence.toLowerCase() === "fuck") {
-  console.log(censorSenctence.replace("***"));
+  console.log(censorSenctence.replaceAll('dumb', "***"));
 
 
 } else {
