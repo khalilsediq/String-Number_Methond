@@ -169,12 +169,29 @@ inpuChar.addEventListener("change", () => {
 
 
 // find Second word:  write a funciton to find a second word in a sentence using split()
-function CallToSplit() {
-  let sentence = prompt("Enter Your Sentence")
-  let sentenceSp = sentence.trim()
-  let newSentence = sentenceSp.split(" ")
-  if(newSentence[1] === undefined) return "Sorry We could Not Find Your Second Word."
-  return `your second word is ${newSentence[1]} ` 
-  // console.log(sentenceSp[1]);
+const bt12 = document.querySelector("#bt12")
+bt12.addEventListener("click", () => {
+
+  function CallToSplit() {
+    let sentence = prompt("Enter Your Sentence")
+    let sentenceSp = sentence.trim()
+    let newSentence = sentenceSp.split(" ")
+    if (newSentence[1] === undefined) return "Sorry We could Not Find Your Second Word."
+    return `your second word is ${newSentence[1]} `
+    // console.log(sentenceSp[1]);
+  }
+  console.log(CallToSplit());
+})
+
+
+//13: censor a word: Replace ALl instances of a bad word like "dumb" in a string with "******"
+
+let censorSenctence = "hello your are dumb"
+if (censorSenctence.toLowerCase() === "dumb" || censorSenctence.toLowerCase() === "shit" || censorSenctence.toLowerCase() === "fuck") {
+  console.log(censorSenctence.replace("***"));
+
+
+} else {
+  console.log(censorSenctence);
+
 }
-console.log(CallToSplit());
